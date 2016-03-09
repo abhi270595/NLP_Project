@@ -25,6 +25,11 @@ int main()
                 s[i]=s[i];
             else if(s[i]>='A' && s[i]<='Z')
                 s[i]='a'+(s[i]-'A');
+            else if(s[i]-' '==7)
+            {
+                s.erase(s.begin()+i);
+                i=i-1;
+            }
             else 
                 s[i]=' ';
         }
