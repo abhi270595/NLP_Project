@@ -42,7 +42,7 @@ although 10
 always 10
 amazed 3
 amazing 11
-amazon 51
+amazon 50
 among 2
 amount 3
 annoying 5
@@ -164,7 +164,7 @@ button 12
 buttons 12
 buy 141
 buyer 2
-buying 29
+buying 28
 buys 2
 buzzing 2
 cable 7
@@ -397,7 +397,7 @@ dvds 2
 dvr 5
 e 12
 each 8
-ear 15
+ear 14
 earbuds 8
 earlier 2
 earphones 4
@@ -604,7 +604,7 @@ hd 3
 hdd 2
 head 6
 headphone 9
-headphones 24
+headphones 22
 heads 3
 hear 5
 heard 8
@@ -686,7 +686,7 @@ ipod 202
 ipods 25
 iriver 13
 isnt 14
-issue 11
+issue 10
 issues 4
 item 74
 items 12
@@ -900,7 +900,7 @@ new 67
 news 3
 next 15
 nexus 2
-nice 43
+nice 42
 nifty 2
 night 6
 nightmare 2
@@ -931,7 +931,7 @@ office 2
 often 5
 oh 3
 ok 12
-okay 6
+okay 5
 old 23
 oldest 2
 olympus 3
@@ -1058,7 +1058,7 @@ product 236
 products 18
 program 7
 programs 4
-promised 6
+promised 5
 prompt 2
 promptly 3
 prone 3
@@ -1066,7 +1066,7 @@ properly 8
 proprietary 5
 pros 3
 protective 5
-provided 4
+provided 3
 public 3
 punch 2
 purchase 29
@@ -1289,11 +1289,11 @@ sleek 3
 slick 2
 slightly 3
 slow 11
-small 55
+small 54
 smaller 8
 smokes 2
 snowboarding 2
-software 55
+software 54
 sold 6
 solid 4
 solo 2
@@ -1484,7 +1484,7 @@ unable 7
 under 3
 understand 9
 unfortunately 7
-unit 56
+unit 55
 units 10
 unknow 2
 unless 5
@@ -1592,7 +1592,7 @@ word 4
 worked 46
 working 60
 workout 6
-works 85
+works 84
 world 3
 worry 3
 worse 2
