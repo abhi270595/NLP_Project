@@ -8,6 +8,7 @@ int main()
 	for(int i=0;i<10;i++)
 	{
 		map<string,int> vocabularypos,vocabularyneg,vocabulary;
+		int positive=0,negative=0;
 		for(int val=0;val<10;val++)
 		{
 			if(val==i)
@@ -51,9 +52,15 @@ int main()
 					}
         		}
 				else if(s=="-")
+				{
 					flag=-1;
+					negative++;
+				}
 				else if(s=="+")
+				{
 					flag=1;
+					positive++;
+				}
     		}
 			fold.close();
 		}
@@ -68,8 +75,8 @@ int main()
 		for(map<string,int>::iterator it=vocabularyneg.begin(); it!=vocabularyneg.end(); ++it)
         	tcountneg+=it->second;
 		double denompos=countvocab+tcountpos,denomneg=countvocab+tcountneg;
-		model<<"p(+) = "<<log10(0.5)<<endl;
-		model<<"p(-) = "<<log10(0.5)<<endl;
+		model<<"p(+) = "<<log10(positive/(double)(positive+negative))<<endl;
+		model<<"p(-) = "<<log10(negative/(double)(positive+negative))<<endl;
 		model<<"|V| = "<<countvocab<<endl;
 		model<<"totalnumofwordsinnegative = "<<tcountpos<<endl;
 		model<<"totalnumofwordsinpositive = "<<tcountneg<<endl;
