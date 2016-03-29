@@ -8,6 +8,7 @@
 
 ## How to Run this Program
 1. Clone the directory by the command ---> git clone https://github.com/kmvicky/NLP_Project
-2. Then run this command on the terminal ---> make
+2. Change your directory to NLP_Project ---> cd NLP_Project
+3. Then run this command on the terminal ---> make
 
 Accuracy of Multinomial Naive Bayes Model = 84.3%
