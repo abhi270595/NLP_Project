@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-    string s,eq;
+	string s,eq;
 	double val;
 	int correct=0;
 	for(int i=0;i<10;i++)
@@ -39,27 +39,27 @@ int main()
 		fold.open(filename1);
 		int flag=0;
 		double posprob=0,negprob=0;
-    	while(fold>>s)
-    	{
-        	if(s!="-" && s!="+")
-        	{
+		while(fold>>s)
+		{
+			if(s!="-" && s!="+")
+			{
 				s="p("+s+"|+)";
 				if(probpos.find(s)!=probpos.end())
-           		{
-               		map<string,double>::iterator it = probpos.find(s);
-              		posprob+=it->second;
-           		}
-           		else
-               		posprob+=log10(1/denompos);
+				{
+					map<string,double>::iterator it = probpos.find(s);
+					posprob+=it->second;
+				}
+				else
+					posprob+=log10(1/denompos);
 				s[s.length()-2]='-';
 				if(probneg.find(s)!=probneg.end())
-           		{
-               		map<string,double>::iterator it = probneg.find(s);
-               		negprob+=it->second;
-           		}
-           		else
-               		negprob+=log10(1/denomneg);
-       		}
+				{
+					map<string,double>::iterator it = probneg.find(s);
+					negprob+=it->second;
+				}
+				else
+					negprob+=log10(1/denomneg);
+			}
 			else if(s=="-")
 			{
 				int ans=0;
@@ -84,7 +84,7 @@ int main()
 				posprob=0;
 				negprob=0;
 			}
-    	}
+		}
 		int ans=0;
 		posprob+=positive;
 		negprob+=negative;
