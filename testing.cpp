@@ -50,7 +50,7 @@ int main()
               		posprob+=it->second;
            		}
            		else
-               		posprob+=(1/denompos);
+               		posprob+=log10(1/denompos);
 				s[s.length()-2]='-';
 				if(probneg.find(s)!=probneg.end())
            		{
@@ -58,7 +58,7 @@ int main()
                		negprob+=it->second;
            		}
            		else
-               		negprob+=(1/denomneg);
+               		negprob+=log10(1/denomneg);
        		}
 			else if(s=="-")
 			{
@@ -92,10 +92,12 @@ int main()
 		if(flag!=0 && ans==flag)
 			correct++;
 		fold.close();
+		remove(filename1);
 	}
 	ofstream myfile;
 	myfile.open("README.md",ios_base::app);
 	myfile<<"\nAccuracy of Multinomial Naive Bayes Model = "<<(correct)/(double)(10)<<"%"<<endl;
 	myfile.close();
+	cout<<"\nAccuracy of Multinomial Naive Bayes Model = "<<(correct)/(double)(10)<<"%"<<endl;
     return 0;
 }
