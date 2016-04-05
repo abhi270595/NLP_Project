@@ -64,6 +64,7 @@ int main()
 			}
 			fold.close();
 		}
+		//cout<<"positive="<<positive<<" , negative="<<negative<<endl;
 		ofstream model;
 		char filename[11]={'m','o','d','e','l',i+'0','.','t','x','t','\0'};
 		model.open(filename);
@@ -75,6 +76,7 @@ int main()
 		for(map<string,int>::iterator it=vocabularyneg.begin(); it!=vocabularyneg.end(); ++it)
 			tcountneg+=it->second;
 		double denompos=countvocab+tcountpos,denomneg=countvocab+tcountneg;
+		model<<"totalnumofreviews = "<<positive+negative<<endl;
 		model<<"p(+) = "<<log10(positive/(double)(positive+negative))<<endl;
 		model<<"p(-) = "<<log10(negative/(double)(positive+negative))<<endl;
 		model<<"|V| = "<<countvocab<<endl;

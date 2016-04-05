@@ -5,7 +5,7 @@ using namespace std;
 int main()
 {
 	string s,eq;
-	double val;
+	double val,treviews=0.0;
 	int correct=0;
 	for(int i=0;i<10;i++)
 	{
@@ -23,6 +23,8 @@ int main()
 				negative=val;
 			else if(s=="|V|")
 				countvocab=(int)val;
+			else if(s=="totalnumofreviews")
+				treviews=val;
 			else if(s=="totalnumofwordsinnegative")
 				tcountneg=(int)val;
 			else if(s=="totalnumofwordsinpositive")
@@ -96,8 +98,8 @@ int main()
 	}
 	ofstream myfile;
 	myfile.open("README.md",ios_base::app);
-	myfile<<"\nAccuracy of Multinomial Naive Bayes Model = "<<(correct)/(double)(10)<<"%"<<endl;
+	myfile<<"\nAccuracy of Multinomial Naive Bayes Model = "<<(correct)/(double)(((treviews*10)/9)/100)<<"%"<<endl;
 	myfile.close();
-	cout<<"\nAccuracy of Multinomial Naive Bayes Model = "<<(correct)/(double)(10)<<"%"<<endl;
+	cout<<"\nAccuracy of Multinomial Naive Bayes Model = "<<(correct)/(double)(((treviews*10)/9)/100)<<"%"<<endl;
     return 0;
 }
