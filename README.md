@@ -12,3 +12,5 @@
 3. Then run this command on the terminal ---> make
 
 Accuracy of Multinomial Naive Bayes Model = 84.3%
+
+Bigram accuracy of Multinomial Naive Bayes Model = 83.6%

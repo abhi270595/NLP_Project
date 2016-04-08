@@ -50,17 +50,21 @@ int main()
 				{
 					map<string,double>::iterator it = probpos.find(s);
 					posprob+=it->second;
+					//cout<<"string="<<s<<" ---> probab="<<it->second<<" ---> totalpro="<<posprob<<endl;
 				}
 				else
 					posprob+=log10(1/denompos);
+//cout<<"string="<<s<<" ---> probab="<<log10(1/denompos)<<" ---> totalpro="<<posprob<<endl;
 				s[s.length()-2]='-';
 				if(probneg.find(s)!=probneg.end())
 				{
 					map<string,double>::iterator it = probneg.find(s);
 					negprob+=it->second;
+					//cout<<"string="<<s<<" ---> probab="<<it->second<<" ---> totalpro="<<negprob<<endl;
 				}
 				else
 					negprob+=log10(1/denomneg);
+//cout<<"string="<<s<<" ---> probab="<<log10(1/denompos)<<" ---> totalpro="<<negprob<<endl;
 			}
 			else if(s=="-")
 			{
@@ -70,6 +74,7 @@ int main()
 				ans=(posprob<negprob)?(-1):(1);
 				if(flag!=0 && ans==flag)
 					correct++;
+				//cout<<"unigram correct="<<correct<<" , flag="<<flag<<" , pos="<<posprob<<" , neg="<<negprob<<endl;
 				flag=-1;
 				posprob=0;
 				negprob=0;
@@ -82,6 +87,7 @@ int main()
 				ans=(posprob<negprob)?(-1):(1);
 				if(flag!=0 && ans==flag)
 					correct++;
+				//cout<<"unigram correct="<<correct<<" , flag="<<flag<<" , pos="<<posprob<<" , neg="<<negprob<<endl;
 				flag=1;
 				posprob=0;
 				negprob=0;
@@ -93,8 +99,8 @@ int main()
 		ans=(posprob<negprob)?(-1):(1);
 		if(flag!=0 && ans==flag)
 			correct++;
+		//cout<<"unigram correct="<<correct<<" , flag="<<flag<<" , pos="<<posprob<<" , neg="<<negprob<<endl;
 		fold.close();
-		remove(filename1);
 	}
 	ofstream myfile;
 	myfile.open("README.md",ios_base::app);
